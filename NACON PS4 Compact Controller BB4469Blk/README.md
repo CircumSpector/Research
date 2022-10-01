@@ -12,6 +12,95 @@ My particular model can be switched to WinUSB using [Identinator](https://github
 
 When `Share` and `Options` buttons are kept pressed simultaneously while plugging it into a PC, the pad seems to switch into some sort of firmware flash mode? The device name changes to "Updater" and uses IDs VID `0x2f24` and PID `0x0001`.
 
+### Wireshark
+
+```text
+Frame 2: 46 bytes on wire (368 bits), 46 bytes captured (368 bits) on interface \\.\USBPcap2, id 0
+USB URB
+DEVICE DESCRIPTOR
+    bLength: 18
+    bDescriptorType: 0x01 (DEVICE)
+    bcdUSB: 0x0110
+    bDeviceClass: Device (0x00)
+    bDeviceSubClass: 0
+    bDeviceProtocol: 0 (Use class code info from Interface Descriptors)
+    bMaxPacketSize0: 64
+    idVendor: Unknown (0x2f24)
+    idProduct: Unknown (0x0001)
+    bcdDevice: 0x0120
+    iManufacturer: 1
+    iProduct: 2
+    iSerialNumber: 0
+    bNumConfigurations: 1
+
+Frame 4: 37 bytes on wire (296 bits), 37 bytes captured (296 bits) on interface \\.\USBPcap2, id 0
+USB URB
+CONFIGURATION DESCRIPTOR
+    bLength: 9
+    bDescriptorType: 0x02 (CONFIGURATION)
+    wTotalLength: 34
+    bNumInterfaces: 1
+    bConfigurationValue: 1
+    iConfiguration: 0
+    Configuration bmAttributes: 0x80  NOT SELF-POWERED  NO REMOTE-WAKEUP
+    bMaxPower: 50  (100mA)
+
+Frame 6: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface \\.\USBPcap2, id 0
+USB URB
+CONFIGURATION DESCRIPTOR
+    bLength: 9
+    bDescriptorType: 0x02 (CONFIGURATION)
+    wTotalLength: 34
+    bNumInterfaces: 1
+    bConfigurationValue: 1
+    iConfiguration: 0
+    Configuration bmAttributes: 0x80  NOT SELF-POWERED  NO REMOTE-WAKEUP
+    bMaxPower: 50  (100mA)
+INTERFACE DESCRIPTOR (0.0): class HID
+    bLength: 9
+    bDescriptorType: 0x04 (INTERFACE)
+    bInterfaceNumber: 0
+    bAlternateSetting: 0
+    bNumEndpoints: 1
+    bInterfaceClass: HID (0x03)
+    bInterfaceSubClass: No Subclass (0x00)
+    bInterfaceProtocol: 0x00
+    iInterface: 0
+UNKNOWN DESCRIPTOR
+    bLength: 9
+    bDescriptorType: 0x21 (unknown)
+ENDPOINT DESCRIPTOR
+    bLength: 7
+    bDescriptorType: 0x05 (ENDPOINT)
+    bEndpointAddress: 0x81  IN  Endpoint:1
+    bmAttributes: 0x03
+    wMaxPacketSize: 32
+    bInterval: 32
+
+Frame 9: 36 bytes on wire (288 bits), 36 bytes captured (288 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Setup Data
+    bmRequestType: 0x21
+    bRequest: 10
+    wValue: 0x0000
+    wIndex: 0 (0x0000)
+    wLength: 0
+
+Frame 11: 36 bytes on wire (288 bits), 36 bytes captured (288 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Setup Data
+    bmRequestType: 0x81
+    bRequest: 6
+    wValue: 0x2200
+    wIndex: 0 (0x0000)
+    wLength: 100
+
+Frame 12: 64 bytes on wire (512 bits), 64 bytes captured (512 bits) on interface \\.\USBPcap2, id 0
+USB URB
+CONTROL response data: 0600ff0901a10119012902150025017501960001810219012902150025019600029102c0
+
+```
+
 ### UsbTreeView
 
 ```text
