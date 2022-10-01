@@ -289,6 +289,430 @@ Connection sequence slightly differs between on PS and on Windows. The PS's firs
 
 ![PpYyGBB2bl.png](images/PpYyGBB2bl.png)
 
+### Wireshark decoding on PS mode
+
+#### Configuration Descriptor
+
+```text
+Frame 457: 42 bytes on wire (336 bits), 42 bytes captured (336 bits)
+USB Packet
+USB URB
+CONFIGURATION DESCRIPTOR
+    bLength: 9
+    bDescriptorType: 0x02 (CONFIGURATION)
+    wTotalLength: 231
+    bNumInterfaces: 4
+    bConfigurationValue: 1
+    iConfiguration: 0
+    Configuration bmAttributes: 0x80  NOT SELF-POWERED  NO REMOTE-WAKEUP
+        1... .... = Must be 1: Must be 1 for USB 1.1 and higher
+        .0.. .... = Self-Powered: This device is powered from the USB bus
+        ..0. .... = Remote Wakeup: This device does NOT support remote wakeup
+    bMaxPower: 250  (500mA)
+INTERFACE DESCRIPTOR (0.0): class Audio
+    bLength: 9
+    bDescriptorType: 0x04 (INTERFACE)
+    bInterfaceNumber: 0
+    bAlternateSetting: 0
+    bNumEndpoints: 0
+    bInterfaceClass: Audio (0x01)
+    bInterfaceSubClass: Audio Control (0x01)
+    bInterfaceProtocol: 0x00
+    iInterface: 0
+Class-specific Audio Control Interface Descriptor: Header Descriptor
+    bLength: 10
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Header Descriptor (0x01)
+    Version: 1.00
+    Total length: 71
+    Total number of interfaces: 2
+    Interface number: 1
+    Interface number: 2
+Class-specific Audio Control Interface Descriptor: Input terminal descriptor
+    bLength: 12
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Input terminal descriptor (0x02)
+    Terminal ID: 1
+    Terminal Type: USB Streaming (0x0101)
+    Assoc Terminal: 6
+    Number Channels: 2
+    Channel Config: 0x0003, Left Front, Right Front
+        .... .... .... ...1 = Left Front: True
+        .... .... .... ..1. = Right Front: True
+        .... .... .... .0.. = Center Front: False
+        .... .... .... 0... = Low Frequency Enhancement: False
+        .... .... ...0 .... = Left Surround: False
+        .... .... ..0. .... = Right Surround: False
+        .... .... .0.. .... = Left of Center: False
+        .... .... 0... .... = Right of Center: False
+        .... ...0 .... .... = Surround: False
+        .... ..0. .... .... = Side Left: False
+        .... .0.. .... .... = Side Right: False
+        .... 0... .... .... = Top: False
+        0000 .... .... .... = Reserved: 0x0
+    Channel Names: 0
+    String descriptor index: 0
+Class-specific Audio Control Interface Descriptor: Feature unit descriptor
+    bLength: 10
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Feature unit descriptor (0x06)
+    Unit ID: 2
+    Source ID: 1
+    Control Size: 1
+    Controls: 030000
+        Master channel 0 Control: 0x03, Mute, Volume
+            .... ...1 = Mute: True
+            .... ..1. = Volume: True
+            .... .0.. = Bass: False
+            .... 0... = Mid: False
+            ...0 .... = Treble: False
+            ..0. .... = Graphic Equalizer: False
+            .0.. .... = Automatic Gain: False
+            0... .... = Delay: False
+        Logical channel 1 Control: 0x00
+            .... ...0 = Mute: False
+            .... ..0. = Volume: False
+            .... .0.. = Bass: False
+            .... 0... = Mid: False
+            ...0 .... = Treble: False
+            ..0. .... = Graphic Equalizer: False
+            .0.. .... = Automatic Gain: False
+            0... .... = Delay: False
+        Logical channel 2 Control: 0x00
+            .... ...0 = Mute: False
+            .... ..0. = Volume: False
+            .... .0.. = Bass: False
+            .... 0... = Mid: False
+            ...0 .... = Treble: False
+            ..0. .... = Graphic Equalizer: False
+            .0.. .... = Automatic Gain: False
+            0... .... = Delay: False
+    Feature: 0
+Class-specific Audio Control Interface Descriptor: Output terminal descriptor
+    bLength: 9
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Output terminal descriptor (0x03)
+    Terminal ID: 3
+    Terminal Type: Headset (0x0402)
+    Assoc Terminal: 4
+    Source ID: 2
+    String descriptor index: 0
+Class-specific Audio Control Interface Descriptor: Input terminal descriptor
+    bLength: 12
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Input terminal descriptor (0x02)
+    Terminal ID: 4
+    Terminal Type: Headset (0x0402)
+    Assoc Terminal: 3
+    Number Channels: 1
+    Channel Config: 0x0000
+        .... .... .... ...0 = Left Front: False
+        .... .... .... ..0. = Right Front: False
+        .... .... .... .0.. = Center Front: False
+        .... .... .... 0... = Low Frequency Enhancement: False
+        .... .... ...0 .... = Left Surround: False
+        .... .... ..0. .... = Right Surround: False
+        .... .... .0.. .... = Left of Center: False
+        .... .... 0... .... = Right of Center: False
+        .... ...0 .... .... = Surround: False
+        .... ..0. .... .... = Side Left: False
+        .... .0.. .... .... = Side Right: False
+        .... 0... .... .... = Top: False
+        0000 .... .... .... = Reserved: 0x0
+    Channel Names: 0
+    String descriptor index: 0
+Class-specific Audio Control Interface Descriptor: Feature unit descriptor
+    bLength: 9
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Feature unit descriptor (0x06)
+    Unit ID: 5
+    Source ID: 4
+    Control Size: 1
+    Controls: 0300
+        Master channel 0 Control: 0x03, Mute, Volume
+            .... ...1 = Mute: True
+            .... ..1. = Volume: True
+            .... .0.. = Bass: False
+            .... 0... = Mid: False
+            ...0 .... = Treble: False
+            ..0. .... = Graphic Equalizer: False
+            .0.. .... = Automatic Gain: False
+            0... .... = Delay: False
+        Logical channel 1 Control: 0x00
+            .... ...0 = Mute: False
+            .... ..0. = Volume: False
+            .... .0.. = Bass: False
+            .... 0... = Mid: False
+            ...0 .... = Treble: False
+            ..0. .... = Graphic Equalizer: False
+            .0.. .... = Automatic Gain: False
+            0... .... = Delay: False
+    Feature: 0
+Class-specific Audio Control Interface Descriptor: Output terminal descriptor
+    bLength: 9
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Output terminal descriptor (0x03)
+    Terminal ID: 6
+    Terminal Type: USB Streaming (0x0101)
+    Assoc Terminal: 1
+    Source ID: 5
+    String descriptor index: 0
+INTERFACE DESCRIPTOR (1.0): class Audio
+    bLength: 9
+    bDescriptorType: 0x04 (INTERFACE)
+    bInterfaceNumber: 1
+    bAlternateSetting: 0
+    bNumEndpoints: 0
+    bInterfaceClass: Audio (0x01)
+    bInterfaceSubClass: Audio Streaming (0x02)
+    bInterfaceProtocol: 0x00
+    iInterface: 0
+INTERFACE DESCRIPTOR (1.1): class Audio
+    bLength: 9
+    bDescriptorType: 0x04 (INTERFACE)
+    bInterfaceNumber: 1
+    bAlternateSetting: 1
+    bNumEndpoints: 1
+    bInterfaceClass: Audio (0x01)
+    bInterfaceSubClass: Audio Streaming (0x02)
+    bInterfaceProtocol: 0x00
+    iInterface: 0
+Class-specific Audio Streaming Interface Descriptor: General AS Descriptor
+    bLength: 7
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: General AS Descriptor (0x01)
+    Connected Terminal ID: 1
+    Interface delay in frames: 1
+    Format: PCM (0x0001)
+Class-specific Audio Streaming Interface Descriptor: Format type descriptor
+    bLength: 14
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Format type descriptor (0x02)
+    FormatType: 1
+    Number Channels: 2
+    Subframe Size: 2
+    Bit Resolution: 16
+    Samples Frequence Type: 2
+    Samples Frequence: 32000
+    Samples Frequence: 48000
+ENDPOINT DESCRIPTOR
+    bLength: 9
+    bDescriptorType: 0x05 (ENDPOINT)
+    bEndpointAddress: 0x01  OUT  Endpoint:1
+        0... .... = Direction: OUT Endpoint
+        .... 0001 = Endpoint Number: 0x1
+    bmAttributes: 0x09
+        .... ..01 = Transfertype: Isochronous-Transfer (0x1)
+        .... 10.. = Synchronisationtype: Adaptive (0x2)
+        ..00 .... = Behaviourtype: Data-Endpoint (0x0)
+    wMaxPacketSize: 196
+        ...0 0... .... .... = Transactions per microframe: 1 (0)
+        .... ..00 1100 0100 = Maximum Packet Size: 196
+    bInterval: 1
+    bRefresh: 0
+    bSynchAddress: 0
+Class-specific Audio Streaming Endpoint Descriptor
+    bLength: 7
+    bDescriptorType: 0x25 (audio class endpoint)
+    Subtype: General Descriptor (0x01)
+    Attributes: 0x01, Sampling Frequency Control
+        .... ...1 = Sampling Frequency Control: True
+        .... ..0. = Pitch Control: False
+        .000 00.. = Reserved: 0x00
+        0... .... = MaxPacketsOnly: False
+    Lock Delay Units: Undefined (0)
+    Lock Delay: 0
+INTERFACE DESCRIPTOR (2.0): class Audio
+    bLength: 9
+    bDescriptorType: 0x04 (INTERFACE)
+    bInterfaceNumber: 2
+    bAlternateSetting: 0
+    bNumEndpoints: 0
+    bInterfaceClass: Audio (0x01)
+    bInterfaceSubClass: Audio Streaming (0x02)
+    bInterfaceProtocol: 0x00
+    iInterface: 0
+INTERFACE DESCRIPTOR (2.1): class Audio
+    bLength: 9
+    bDescriptorType: 0x04 (INTERFACE)
+    bInterfaceNumber: 2
+    bAlternateSetting: 1
+    bNumEndpoints: 1
+    bInterfaceClass: Audio (0x01)
+    bInterfaceSubClass: Audio Streaming (0x02)
+    bInterfaceProtocol: 0x00
+    iInterface: 0
+Class-specific Audio Streaming Interface Descriptor: General AS Descriptor
+    bLength: 7
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: General AS Descriptor (0x01)
+    Connected Terminal ID: 6
+    Interface delay in frames: 1
+    Format: PCM (0x0001)
+Class-specific Audio Streaming Interface Descriptor: Format type descriptor
+    bLength: 14
+    bDescriptorType: 0x24 (audio class interface)
+    Subtype: Format type descriptor (0x02)
+    FormatType: 1
+    Number Channels: 1
+    Subframe Size: 2
+    Bit Resolution: 16
+    Samples Frequence Type: 2
+    Samples Frequence: 16000
+    Samples Frequence: 48000
+ENDPOINT DESCRIPTOR
+    bLength: 9
+    bDescriptorType: 0x05 (ENDPOINT)
+    bEndpointAddress: 0x82  IN  Endpoint:2
+        1... .... = Direction: IN Endpoint
+        .... 0010 = Endpoint Number: 0x2
+    bmAttributes: 0x05
+        .... ..01 = Transfertype: Isochronous-Transfer (0x1)
+        .... 01.. = Synchronisationtype: Asynchronous (0x1)
+        ..00 .... = Behaviourtype: Data-Endpoint (0x0)
+    wMaxPacketSize: 98
+        ...0 0... .... .... = Transactions per microframe: 1 (0)
+        .... ..00 0110 0010 = Maximum Packet Size: 98
+    bInterval: 1
+    bRefresh: 0
+    bSynchAddress: 0
+Class-specific Audio Streaming Endpoint Descriptor
+    bLength: 7
+    bDescriptorType: 0x25 (audio class endpoint)
+    Subtype: General Descriptor (0x01)
+    Attributes: 0x01, Sampling Frequency Control
+        .... ...1 = Sampling Frequency Control: True
+        .... ..0. = Pitch Control: False
+        .000 00.. = Reserved: 0x00
+        0... .... = MaxPacketsOnly: False
+    Lock Delay Units: Undefined (0)
+    Lock Delay: 0
+INTERFACE DESCRIPTOR (3.0): class HID
+    bLength: 9
+    bDescriptorType: 0x04 (INTERFACE)
+    bInterfaceNumber: 3
+    bAlternateSetting: 0
+    bNumEndpoints: 2
+    bInterfaceClass: HID (0x03)
+    bInterfaceSubClass: No Subclass (0x00)
+    bInterfaceProtocol: 0x00
+    iInterface: 0
+UNKNOWN DESCRIPTOR
+    bLength: 9
+    bDescriptorType: 0x21 (unknown)
+ENDPOINT DESCRIPTOR
+    bLength: 7
+    bDescriptorType: 0x05 (ENDPOINT)
+    bEndpointAddress: 0x84  IN  Endpoint:4
+        1... .... = Direction: IN Endpoint
+        .... 0100 = Endpoint Number: 0x4
+    bmAttributes: 0x03
+        .... ..11 = Transfertype: Interrupt-Transfer (0x3)
+    wMaxPacketSize: 64
+        ...0 0... .... .... = Transactions per microframe: 1 (0)
+        .... ..00 0100 0000 = Maximum Packet Size: 64
+    bInterval: 5
+ENDPOINT DESCRIPTOR
+    bLength: 7
+    bDescriptorType: 0x05 (ENDPOINT)
+    bEndpointAddress: 0x03  OUT  Endpoint:3
+        0... .... = Direction: OUT Endpoint
+        .... 0011 = Endpoint Number: 0x3
+    bmAttributes: 0x03
+        .... ..11 = Transfertype: Interrupt-Transfer (0x3)
+    wMaxPacketSize: 64
+        ...0 0... .... .... = Transactions per microframe: 1 (0)
+        .... ..00 0100 0000 = Maximum Packet Size: 64
+    bInterval: 5
+
+```
+
+#### HID Report Descriptor
+
+```text
+0x05, 0x01,        // Usage Page (Generic Desktop Ctrls)
+0x09, 0x05,        // Usage (Game Pad)
+0xA1, 0x01,        // Collection (Application)
+0x85, 0x01,        //   Report ID (1)
+0x09, 0x30,        //   Usage (X)
+0x09, 0x31,        //   Usage (Y)
+0x09, 0x32,        //   Usage (Z)
+0x09, 0x35,        //   Usage (Rz)
+0x15, 0x00,        //   Logical Minimum (0)
+0x26, 0xFF, 0x00,  //   Logical Maximum (255)
+0x75, 0x08,        //   Report Size (8)
+0x95, 0x04,        //   Report Count (4)
+0x81, 0x02,        //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+0x09, 0x39,        //   Usage (Hat switch)
+0x15, 0x00,        //   Logical Minimum (0)
+0x25, 0x07,        //   Logical Maximum (7)
+0x35, 0x00,        //   Physical Minimum (0)
+0x46, 0x3B, 0x01,  //   Physical Maximum (315)
+0x65, 0x14,        //   Unit (System: English Rotation, Length: Centimeter)
+0x75, 0x04,        //   Report Size (4)
+0x95, 0x01,        //   Report Count (1)
+0x81, 0x42,        //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,Null State)
+0x65, 0x00,        //   Unit (None)
+0x05, 0x09,        //   Usage Page (Button)
+0x19, 0x01,        //   Usage Minimum (0x01)
+0x29, 0x0E,        //   Usage Maximum (0x0E)
+0x15, 0x00,        //   Logical Minimum (0)
+0x25, 0x01,        //   Logical Maximum (1)
+0x75, 0x01,        //   Report Size (1)
+0x95, 0x0E,        //   Report Count (14)
+0x81, 0x02,        //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+0x06, 0x00, 0xFF,  // Usage Page (Vendor Defined 0xFF00)
+0x09, 0x20,        // Usage (0x20)
+0x75, 0x06,        // Report Size (6)
+0x95, 0x01,        // Report Count (1)
+0x81, 0x02,        // Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+0x05, 0x01,        // Usage Page (Generic Desktop Ctrls)
+0x09, 0x33,        // Usage (Rx)
+0x09, 0x34,        // Usage (Ry)
+0x15, 0x00,        // Logical Minimum (0)
+0x26, 0xFF, 0x00,  // Logical Maximum (255)
+0x75, 0x08,        // Report Size (8)
+0x95, 0x02,        // Report Count (2)
+0x81, 0x02,        // Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+0x06, 0x00, 0xFF,  // Usage Page (Vendor Defined 0xFF00)
+0x09, 0x21,        // Usage (0x21)
+0x95, 0x36,        // Report Count (54)
+0x81, 0x02,        // Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+0x85, 0x05,        // Report ID (5)
+0x09, 0x22,        // Usage (0x22)
+0x95, 0x1F,        // Report Count (31)
+0x91, 0x02,        // Output (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0x85, 0x03,        // Report ID (3)
+0x0A, 0x21, 0x27,  // Usage (0x2721)
+0x95, 0x2F,        // Report Count (47)
+0xB1, 0x02,        // Feature (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0x06, 0x80, 0xFF,  // Usage Page (Vendor Defined 0xFF80)
+0x85, 0xE0,        // Report ID (-32)
+0x09, 0x57,        // Usage (0x57)
+0x95, 0x02,        // Report Count (2)
+0xB1,              // Feature (Data,Array,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0x02, 0xC0, 0x06,  // Unknown (bTag: 0x00, bType: 0x00)
+0xF0,              // Unknown (bTag: 0x0F, bType: 0x00)
+0xFF, 0x09, 0x40, 0xA1, 0x01,  // Unknown (bTag: 0x0F, bType: 0x03)
+0x85, 0xF0,        // Report ID (-16)
+0x09, 0x47,        // Usage (0x47)
+0x95, 0x3F,        // Report Count (63)
+0xB1, 0x02,        // Feature (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0x85, 0xF1,        // Report ID (-15)
+0x09, 0x48,        // Usage (0x48)
+0x95, 0x3F,        // Report Count (63)
+0xB1, 0x02,        // Feature (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0x85, 0xF2,        // Report ID (-14)
+0x09, 0x49,        // Usage (0x49)
+0x95, 0x0F,        // Report Count (15)
+0xB1, 0x02,        // Feature (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0x85, 0xF3,        // Report ID (-13)
+0x0A, 0x01, 0x47,  // Usage (0x4701)
+0x95, 0x07,        // Report Count (7)
+0xB1, 0x02,        // Feature (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0xC0,              // End Collection
+```
+
 ### UsbTreeView (WinSUB)
 
 ```text
