@@ -99,6 +99,27 @@ Frame 12: 64 bytes on wire (512 bits), 64 bytes captured (512 bits) on interface
 USB URB
 CONTROL response data: 0600ff0901a10119012902150025017501960001810219012902150025019600029102c0
 
+0x06, 0x00, 0xFF,  // Usage Page (Vendor Defined 0xFF00)
+0x09, 0x01,        // Usage (0x01)
+0xA1, 0x01,        // Collection (Application)
+0x19, 0x01,        //   Usage Minimum (0x01)
+0x29, 0x02,        //   Usage Maximum (0x02)
+0x15, 0x00,        //   Logical Minimum (0)
+0x25, 0x01,        //   Logical Maximum (1)
+0x75, 0x01,        //   Report Size (1)
+0x96, 0x00, 0x01,  //   Report Count (256)
+0x81, 0x02,        //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+0x19, 0x01,        //   Usage Minimum (0x01)
+0x29, 0x02,        //   Usage Maximum (0x02)
+0x15, 0x00,        //   Logical Minimum (0)
+0x25, 0x01,        //   Logical Maximum (1)
+0x96, 0x00, 0x02,  //   Report Count (512)
+0x91, 0x02,        //   Output (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+0xC0,              // End Collection
+
+// 36 bytes
+
+// best guess: USB HID Report Descriptor
 ```
 
 ### UsbTreeView
