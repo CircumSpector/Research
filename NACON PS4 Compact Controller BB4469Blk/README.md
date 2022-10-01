@@ -10,7 +10,11 @@ My particular model can be switched to WinUSB using [Identinator](https://github
 
 ## NACON PS4 Compact Controller BB4469CGry
 
-Running under WinSUB:
+Connection sequence slightly differs between on PS and on Windows. The PS's first GET_DESCRIPTOR request has an 8 byte length while Windows uses 18 bytes. Another difference observed is that the PS firmware issues a SET_ADDRESS before the first GET_DESCRIPTOR whine on Windows this is the other way around. For now these are assumptions as proofing this is difficult without a custom USB stack.
+
+![PpYyGBB2bl.png](images/PpYyGBB2bl.png)
+
+### UsbTreeView (WinSUB)
 
 ```text
 
@@ -205,7 +209,7 @@ Data (HexDump)           : 12 03 30 00 34 00 45 00 30 00 32 00 38 00 45 00   ..0
                            31 00                                             1.
 ```
 
-lsusb:
+### lsusb
 
 ```text
 lsusb -vd 146b:0603
