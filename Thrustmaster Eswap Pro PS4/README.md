@@ -36,3 +36,10 @@ Hardware ID: `USB\VID_044F&PID_D00E`
 20. Back button 1 from Cross to Square
 --- Same as 3-15
 ```
+
+## Bootloader (firmware update mode)
+
+```text
+USB\VID_0483&PID_DF11&REV_2200
+USB\VID_0483&PID_DF11
+```
