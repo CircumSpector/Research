@@ -71,6 +71,14 @@ Setup Data
 
 ```
 
+### Wireshark filter
+
+For the file `nacon-linux-old_scheme-plugin.pcap`:
+
+```text
+((((!(usbll.pid == 0xa5)) && !(usbll.pid == 0xd2)) && !(usbll.pid == 0x5a)) && !(usbll.pid == 0x69)) && !(usbll.pid == 0xe1)
+```
+
 ## "Updater" mode
 
 When `Share` and `Options` buttons are kept pressed simultaneously while plugging it into a PC, the pad seems to switch into some sort of firmware flash mode? The device name changes to "Updater" and uses IDs VID `0x2f24` and PID `0x0001`.
