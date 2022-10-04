@@ -12,6 +12,13 @@ My particular model can be switched to WinUSB using [Identinator](https://github
 
 When `Share` and `Options` buttons are kept pressed simultaneously while plugging it into a PC, the pad seems to switch into some sort of firmware flash mode? The device name changes to "Updater" and uses IDs VID `0x2f24` and PID `0x0001`.
 
+### Payload of updater tool
+
+```text
+H2D: a5e15a1e6d000000006a000000fbcb73773c1e5b0100005b01e034ca7500000a77b8fd6700ee5d73776a00000060cb6c000000000000006c00603f6c00d0fd67
+D2H: a5e15a1e006d0117006a000000fbcb73773c1e5b0100005b01e034ca7500000a
+```
+
 ### Wireshark
 
 ```text
