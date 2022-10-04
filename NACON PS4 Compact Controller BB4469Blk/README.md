@@ -10,6 +10,67 @@ We're basically trying to figure out if we can use this controller in "PS4 mode"
 
 My particular model can be switched to WinUSB using [Identinator](https://github.com/nefarius/Identinator) and the `winusb.reg` file in this folder. It will not work via GUI due to a bug.
 
+## "PS mode" on PC
+
+The controller changes descriptors based on detecting a PlayStation or Windows/Linux PC system on plugin.
+
+The PS firmware invokes the following command sequence on plugin:
+
+- `SET_ADDRESS`
+- `GET_DESCRIPTOR` (`wLength` is 8)
+- `GET_DESCRIPTOR` (`wLength` is 18)
+
+Windows and Linux use a different sequence:
+
+- `GET_DESCRIPTOR` (`wLength` is 64)
+- `SET_ADDRESS`
+- `GET_DESCRIPTOR` (`wLength` is 8)
+- `GET_DESCRIPTOR` (`wLength` is 18)
+
+Currently this can not be altered on Windows without additional custom drivers, it can be partially tested with Linux altering the behaviour of the USB hub driver:
+
+```bash
+sudo sh -c "echo Y >/sys/module/usbcore/parameters/old_scheme_first"
+sudo sh -c "echo N >/sys/module/usbcore/parameters/use_both_schemes"
+```
+
+After that the sequence changes to:
+
+```text
+Frame 76: 11 bytes on wire (88 bits), 11 bytes captured (88 bits)
+USB Packet
+USB URB
+Setup Data
+    bmRequestType: 0x00
+    bRequest: SET ADDRESS (5)
+    Device: 6
+    wIndex: 0 (0x0000)
+    wLength: 0
+
+Frame 104: 11 bytes on wire (88 bits), 11 bytes captured (88 bits)
+USB Packet
+USB URB
+Setup Data
+    bmRequestType: 0x80
+    bRequest: GET DESCRIPTOR (6)
+    Descriptor Index: 0x00
+    bDescriptorType: DEVICE (0x01)
+    Language Id: no language specified (0x0000)
+    wLength: 8
+
+Frame 114: 11 bytes on wire (88 bits), 11 bytes captured (88 bits)
+USB Packet
+USB URB
+Setup Data
+    bmRequestType: 0x80
+    bRequest: GET DESCRIPTOR (6)
+    Descriptor Index: 0x00
+    bDescriptorType: DEVICE (0x01)
+    Language Id: no language specified (0x0000)
+    wLength: 18
+
+```
+
 ## "Updater" mode
 
 When `Share` and `Options` buttons are kept pressed simultaneously while plugging it into a PC, the pad seems to switch into some sort of firmware flash mode? The device name changes to "Updater" and uses IDs VID `0x2f24` and PID `0x0001`.
