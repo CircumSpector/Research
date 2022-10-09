@@ -1,5 +1,12 @@
 # Collective Minds Strike Pack Eliminator Mod Pack - PlayStation 4
 
+## Hardware IDs
+
+```text
+USB\VID_054C&PID_05C5&REV_0100
+USB\VID_054C&PID_05C5
+```
+
 ## USBTreeView
 
 ```text
