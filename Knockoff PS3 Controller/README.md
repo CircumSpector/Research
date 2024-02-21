@@ -2,11 +2,14 @@
 
 ## Hardware IDs
 
-USB
+### USB
+
 ```text
 HID\VID_045E&PID_028E&IG_00\A&32384F79&0&0000
 ```
-BT
+
+### BT
+
 ```text
 HID\{00001124-0000-1000-8000-00805F9B34FB}_VID&0002054C_PID&09CC\C&31157879&12&0000
 ```
@@ -195,3 +198,12 @@ Language 0x0409          : "Controller"
 Data (HexDump)           : 16 03 43 00 6F 00 6E 00 74 00 72 00 6F 00 6C 00   ..C.o.n.t.r.o.l.
                            6C 00 65 00 72 00                                 l.e.r.
 ```
+
+## Photos
+
+![1](images/1.png)
+
+![2](images/2.png)
+
+![3](images/3.png)
+
