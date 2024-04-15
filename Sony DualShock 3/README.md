@@ -9,3 +9,5 @@
 ### CECHZC2E-B1
 
 ### CECHZC2U-A2
+
+### SIXAXIS (no model no.)
