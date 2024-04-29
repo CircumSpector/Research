@@ -1,0 +1,382 @@
+# Retro Fighters Defender Bluetooth Edition
+
+## XInput Mode (Default)
+
+### USBTreeView
+
+```text
+
+    =========================== USB Port7 ===========================
+
+Connection Status        : 0x01 (Device is connected)
+Port Chain               : 1-7
+Properties               : 0x01
+ IsUserConnectable       : yes
+ PortIsDebugCapable      : no
+ PortHasMultiCompanions  : no
+ PortConnectorIsTypeC    : no
+ConnectionIndex          : 0x07 (Port 7)
+CompanionIndex           : 0
+ CompanionHubSymLnk      : USB#ROOT_HUB30#5&32dfb9bc&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+ CompanionPortNumber     : 0x03 (Port 3)
+ -> CompanionPortChain   : 1-3
+
+      ========================== Summary =========================
+Vendor ID                : 0x045E (Microsoft Corporation)
+Product ID               : 0x028E
+USB Version              : 1.1
+Port maximum Speed       : High-Speed (Companion Port 1-3 is doing the SuperSpeed)
+Device maximum Speed     : Full-Speed
+Device Connection Speed  : Full-Speed
+Self powered             : no
+Demanded Current         : 500 mA
+Used Endpoints           : 3
+
+      ======================== USB Device ========================
+
+        +++++++++++++++++ Device Information ++++++++++++++++++
+Device Description       : Xbox 360 Controller for Windows
+Device Path 1            : \\?\USB#VID_045E&PID_028E#Shanwan202107142050#{a5dcbf10-6530-11d2-901f-00c04fb951ed} (GUID_DEVINTERFACE_USB_DEVICE)
+Device Path 2            : \\?\USB#VID_045E&PID_028E#Shanwan202107142050#{ec87f1e3-c13b-4100-b5f7-8b84d54260cb}
+Kernel Name              : \Device\USBPDO-10
+Device ID                : USB\VID_045E&PID_028E\SHANWAN202107142050
+Hardware IDs             : USB\VID_045E&PID_028E&REV_0110 USB\VID_045E&PID_028E
+Driver KeyName           : {d61ca365-5af4-4486-998b-9db4734c6ca3}\0000
+Driver                   : \SystemRoot\System32\drivers\xusb22.sys (Version: 10.0.22621.3374  Date: 2024-03-26  Company: Microsoft Corporation)
+Driver Inf               : C:\Windows\inf\xusb22.inf
+Legacy BusType           : PNPBus
+Class                    : XnaComposite
+Class GUID               : {d61ca365-5af4-4486-998b-9db4734c6ca3}
+Service                  : xusb22
+Enumerator               : USB
+Location Info            : Port_#0007.Hub_#0001
+Address                  : 7
+Location IDs             : PCIROOT(0)#PCI(0102)#PCI(0000)#USBROOT(0)#USB(7), ACPI(_SB_)#ACPI(PCI0)#ACPI(GPP1)#ACPI(PTXH)#ACPI(RHUB)#ACPI(PO7_)
+Container ID             : {2ff19da7-374d-5b65-8581-eb1acb95ac7e}
+Manufacturer Info        : Microsoft
+Capabilities             : 0x94 (Removable, UniqueID, SurpriseRemovalOK)
+Status                   : 0x0180600A (DN_DRIVER_LOADED, DN_STARTED, DN_DISABLEABLE, DN_REMOVABLE, DN_NT_ENUMERATOR, DN_NT_DRIVER)
+Problem Code             : 0
+Power State              : D0 (supported: D0, D3, wake from D0)
+
+        ---------------- Connection Information ---------------
+Connection Index         : 0x07 (Port 7)
+Connection Status        : 0x01 (DeviceConnected)
+Current Config Value     : 0x01 (Configuration 1)
+Device Address           : 0x1D (29)
+Is Hub                   : 0x00 (no)
+Device Bus Speed         : 0x01 (Full-Speed)
+Number of open Pipes     : 0x02 (2 pipes to data endpoints)
+Pipe[0]                  : EndpointID=1  Direction=IN   ScheduleOffset=0  Type=Interrupt  wMaxPacketSize=0x20    bInterval=8   -> 420 Bits/ms = 52500 Bytes/s
+Pipe[1]                  : EndpointID=2  Direction=OUT  ScheduleOffset=0  Type=Interrupt  wMaxPacketSize=0x20    bInterval=8   -> 420 Bits/ms = 52500 Bytes/s
+Data (HexDump)           : 07 00 00 00 12 01 10 01 FF FF FF 40 5E 04 8E 02   ...........@^...
+                           10 01 01 02 03 01 01 01 00 1D 00 02 00 00 00 01   ................
+                           00 00 00 07 05 81 03 20 00 08 00 00 00 00 07 05   ....... ........
+                           02 03 20 00 08 00 00 00 00                        .. ......
+
+        --------------- Connection Information V2 -------------
+Connection Index         : 0x07 (7)
+Length                   : 0x10 (16 bytes)
+SupportedUsbProtocols    : 0x03
+ Usb110                  : 1 (yes, port supports USB 1.1)
+ Usb200                  : 1 (yes, port supports USB 2.0)
+ Usb300                  : 0 (no, port not supports USB 3.0) -> but Companion Port 1-3 does
+ ReservedMBZ             : 0x00
+Flags                    : 0x00
+ DevIsOpAtSsOrHigher     : 0 (Device is not operating at SuperSpeed or higher)
+ DevIsSsCapOrHigher      : 0 (Device is not SuperSpeed capable or higher)
+ DevIsOpAtSsPlusOrHigher : 0 (Device is not operating at SuperSpeedPlus or higher)
+ DevIsSsPlusCapOrHigher  : 0 (Device is not SuperSpeedPlus capable or higher)
+ ReservedMBZ             : 0x00
+Data (HexDump)           : 07 00 00 00 10 00 00 00 03 00 00 00 00 00 00 00   ................
+
+    ---------------------- Device Descriptor ----------------------
+bLength                  : 0x12 (18 bytes)
+bDescriptorType          : 0x01 (Device Descriptor)
+bcdUSB                   : 0x110 (USB Version 1.1)
+bDeviceClass             : 0xFF (Vendor Specific)
+bDeviceSubClass          : 0xFF
+bDeviceProtocol          : 0xFF
+bMaxPacketSize0          : 0x40 (64 bytes)
+idVendor                 : 0x045E (Microsoft Corporation)
+idProduct                : 0x028E
+bcdDevice                : 0x0110
+iManufacturer            : 0x01 (String Descriptor 1)
+ Language 0x0409         : "shanwan"
+iProduct                 : 0x02 (String Descriptor 2)
+ Language 0x0409         : "Xbox360 For Windows"
+iSerialNumber            : 0x03 (String Descriptor 3)
+ Language 0x0409         : "Shanwan202107142050"
+bNumConfigurations       : 0x01 (1 Configuration)
+Data (HexDump)           : 12 01 10 01 FF FF FF 40 5E 04 8E 02 10 01 01 02   .......@^.......
+                           03 01                                             ..
+
+    ------------------ Configuration Descriptor -------------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x02 (Configuration Descriptor)
+wTotalLength             : 0x0030 (48 bytes)
+bNumInterfaces           : 0x01 (1 Interface)
+bConfigurationValue      : 0x01 (Configuration 1)
+iConfiguration           : 0x00 (No String Descriptor)
+bmAttributes             : 0x80
+ D7: Reserved, set 1     : 0x01
+ D6: Self Powered        : 0x00 (no)
+ D5: Remote Wakeup       : 0x00 (no)
+ D4..0: Reserved, set 0  : 0x00
+MaxPower                 : 0xFA (500 mA)
+
+Data (HexDump)           : 09 02 30 00 01 01 00 80 FA 09 04 00 00 02 FF 5D   ..0............]
+                           01 00 10 21 10 01 01 24 81 14 03 00 03 13 02 00   ...!...$........
+                           03 00 07 05 81 03 20 00 08 07 05 02 03 20 00 08   ...... ...... ..
+
+        ---------------- Interface Descriptor -----------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x04 (Interface Descriptor)
+bInterfaceNumber         : 0x00 (Interface 0)
+bAlternateSetting        : 0x00
+bNumEndpoints            : 0x02 (2 Endpoints)
+bInterfaceClass          : 0xFF (Vendor Specific)
+bInterfaceSubClass       : 0x5D
+bInterfaceProtocol       : 0x01
+iInterface               : 0x00 (No String Descriptor)
+Data (HexDump)           : 09 04 00 00 02 FF 5D 01 00                        ......]..
+
+        ----------------- Unknown Descriptor ------------------
+bLength                  : 0x10 (16 bytes)
+bDescriptorType          : 0x21
+Data (HexDump)           : 10 21 10 01 01 24 81 14 03 00 03 13 02 00 03 00 
+                           
+        ----------------- Endpoint Descriptor -----------------
+bLength                  : 0x07 (7 bytes)
+bDescriptorType          : 0x05 (Endpoint Descriptor)
+bEndpointAddress         : 0x81 (Direction=IN EndpointID=1)
+bmAttributes             : 0x03 (TransferType=Interrupt)
+wMaxPacketSize           : 0x0020 (32 bytes)
+bInterval                : 0x08 (8 ms)
+Data (HexDump)           : 07 05 81 03 20 00 08                              .... ..
+
+        ----------------- Endpoint Descriptor -----------------
+bLength                  : 0x07 (7 bytes)
+bDescriptorType          : 0x05 (Endpoint Descriptor)
+bEndpointAddress         : 0x02 (Direction=OUT EndpointID=2)
+bmAttributes             : 0x03 (TransferType=Interrupt)
+wMaxPacketSize           : 0x0020 (32 bytes)
+bInterval                : 0x08 (8 ms)
+Data (HexDump)           : 07 05 02 03 20 00 08                              .... ..
+
+      -------------------- String Descriptors -------------------
+             ------ String Descriptor 0 ------
+bLength                  : 0x04 (4 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language ID[0]           : 0x0409 (English - United States)
+Data (HexDump)           : 04 03 09 04                                       ....
+             ------ String Descriptor 1 ------
+bLength                  : 0x10 (16 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "shanwan"
+Data (HexDump)           : 10 03 73 00 68 00 61 00 6E 00 77 00 61 00 6E 00   ..s.h.a.n.w.a.n.
+             ------ String Descriptor 2 ------
+bLength                  : 0x28 (40 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "Xbox360 For Windows"
+Data (HexDump)           : 28 03 58 00 62 00 6F 00 78 00 33 00 36 00 30 00   (.X.b.o.x.3.6.0.
+                           20 00 46 00 6F 00 72 00 20 00 57 00 69 00 6E 00    .F.o.r. .W.i.n.
+                           64 00 6F 00 77 00 73 00                           d.o.w.s.
+             ------ String Descriptor 3 ------
+bLength                  : 0x28 (40 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "Shanwan202107142050"
+Data (HexDump)           : 28 03 53 00 68 00 61 00 6E 00 77 00 61 00 6E 00   (.S.h.a.n.w.a.n.
+                           32 00 30 00 32 00 31 00 30 00 37 00 31 00 34 00   2.0.2.1.0.7.1.4.
+                           32 00 30 00 35 00 30 00                           2.0.5.0.
+```
+
+## DirectInput Mode
+
+### USBTreeView
+
+```text
+
+    =========================== USB Port7 ===========================
+
+Connection Status        : 0x01 (Device is connected)
+Port Chain               : 1-7
+Properties               : 0x01
+ IsUserConnectable       : yes
+ PortIsDebugCapable      : no
+ PortHasMultiCompanions  : no
+ PortConnectorIsTypeC    : no
+ConnectionIndex          : 0x07 (Port 7)
+CompanionIndex           : 0
+ CompanionHubSymLnk      : USB#ROOT_HUB30#5&32dfb9bc&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+ CompanionPortNumber     : 0x03 (Port 3)
+ -> CompanionPortChain   : 1-3
+
+      ========================== Summary =========================
+Vendor ID                : 0x2563 (Shenzhen ShanWan Technology Co., Ltd.)
+Product ID               : 0x0575
+USB Version              : 1.1
+Port maximum Speed       : High-Speed (Companion Port 1-3 is doing the SuperSpeed)
+Device maximum Speed     : Full-Speed
+Device Connection Speed  : Full-Speed
+Self powered             : no
+Demanded Current         : 500 mA
+Used Endpoints           : 3
+
+      ======================== USB Device ========================
+
+        +++++++++++++++++ Device Information ++++++++++++++++++
+Device Description       : USB Input Device
+Device Path              : \\?\USB#VID_2563&PID_0575#6&2f985c08&0&7#{a5dcbf10-6530-11d2-901f-00c04fb951ed} (GUID_DEVINTERFACE_USB_DEVICE)
+Kernel Name              : \Device\USBPDO-11
+Device ID                : USB\VID_2563&PID_0575\6&2F985C08&0&7
+Hardware IDs             : USB\VID_2563&PID_0575&REV_0100 USB\VID_2563&PID_0575
+Driver KeyName           : {745a17a0-74d3-11d0-b6fe-00a0c90f57da}\0033 (GUID_DEVCLASS_HIDCLASS)
+Driver                   : \SystemRoot\System32\drivers\hidusb.sys (Version: 10.0.22621.3527  Date: 2024-04-26  Company: Microsoft Corporation)
+Driver Inf               : C:\Windows\inf\input.inf
+Legacy BusType           : PNPBus
+Class                    : HIDClass
+Class GUID               : {745a17a0-74d3-11d0-b6fe-00a0c90f57da} (GUID_DEVCLASS_HIDCLASS)
+Service                  : HidUsb
+Enumerator               : USB
+Location Info            : Port_#0007.Hub_#0001
+Address                  : 7
+Location IDs             : PCIROOT(0)#PCI(0102)#PCI(0000)#USBROOT(0)#USB(7), ACPI(_SB_)#ACPI(PCI0)#ACPI(GPP1)#ACPI(PTXH)#ACPI(RHUB)#ACPI(PO7_)
+Container ID             : {1f839908-0432-11ef-8806-d843ae1a79f7}
+Manufacturer Info        : (Standard system devices)
+Capabilities             : 0x84 (Removable, SurpriseRemovalOK)
+Status                   : 0x0180600A (DN_DRIVER_LOADED, DN_STARTED, DN_DISABLEABLE, DN_REMOVABLE, DN_NT_ENUMERATOR, DN_NT_DRIVER)
+Problem Code             : 0
+SelectiveSuspendEnabled  : 0
+EnhancedPowerMgmtEnabled : 1
+Power State              : D0 (supported: D0, D3, wake from D0)
+
+        ---------------- Connection Information ---------------
+Connection Index         : 0x07 (Port 7)
+Connection Status        : 0x01 (DeviceConnected)
+Current Config Value     : 0x01 (Configuration 1)
+Device Address           : 0x1E (30)
+Is Hub                   : 0x00 (no)
+Device Bus Speed         : 0x01 (Full-Speed)
+Number of open Pipes     : 0x02 (2 pipes to data endpoints)
+Pipe[0]                  : EndpointID=2  Direction=OUT  ScheduleOffset=0  Type=Interrupt  wMaxPacketSize=0x40    bInterval=8   -> 718 Bits/ms = 89750 Bytes/s
+Pipe[1]                  : EndpointID=1  Direction=IN   ScheduleOffset=0  Type=Interrupt  wMaxPacketSize=0x40    bInterval=8   -> 718 Bits/ms = 89750 Bytes/s
+Data (HexDump)           : 07 00 00 00 12 01 10 01 00 00 00 40 63 25 75 05   ...........@c%u.
+                           00 01 01 02 00 01 01 01 00 1E 00 02 00 00 00 01   ................
+                           00 00 00 07 05 02 03 40 00 08 00 00 00 00 07 05   .......@........
+                           81 03 40 00 08 00 00 00 00                        ..@......
+
+        --------------- Connection Information V2 -------------
+Connection Index         : 0x07 (7)
+Length                   : 0x10 (16 bytes)
+SupportedUsbProtocols    : 0x03
+ Usb110                  : 1 (yes, port supports USB 1.1)
+ Usb200                  : 1 (yes, port supports USB 2.0)
+ Usb300                  : 0 (no, port not supports USB 3.0) -> but Companion Port 1-3 does
+ ReservedMBZ             : 0x00
+Flags                    : 0x00
+ DevIsOpAtSsOrHigher     : 0 (Device is not operating at SuperSpeed or higher)
+ DevIsSsCapOrHigher      : 0 (Device is not SuperSpeed capable or higher)
+ DevIsOpAtSsPlusOrHigher : 0 (Device is not operating at SuperSpeedPlus or higher)
+ DevIsSsPlusCapOrHigher  : 0 (Device is not SuperSpeedPlus capable or higher)
+ ReservedMBZ             : 0x00
+Data (HexDump)           : 07 00 00 00 10 00 00 00 03 00 00 00 00 00 00 00   ................
+
+    ---------------------- Device Descriptor ----------------------
+bLength                  : 0x12 (18 bytes)
+bDescriptorType          : 0x01 (Device Descriptor)
+bcdUSB                   : 0x110 (USB Version 1.1)
+bDeviceClass             : 0x00 (defined by the interface descriptors)
+bDeviceSubClass          : 0x00
+bDeviceProtocol          : 0x00
+bMaxPacketSize0          : 0x40 (64 bytes)
+idVendor                 : 0x2563 (Shenzhen ShanWan Technology Co., Ltd.)
+idProduct                : 0x0575
+bcdDevice                : 0x0100
+iManufacturer            : 0x01 (String Descriptor 1)
+ Language 0x0409         : "shanwan"
+iProduct                 : 0x02 (String Descriptor 2)
+ Language 0x0409         : "X-D GamePad"
+iSerialNumber            : 0x00 (No String Descriptor)
+bNumConfigurations       : 0x01 (1 Configuration)
+Data (HexDump)           : 12 01 10 01 00 00 00 40 63 25 75 05 00 01 01 02   .......@c%u.....
+                           00 01                                             ..
+
+    ------------------ Configuration Descriptor -------------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x02 (Configuration Descriptor)
+wTotalLength             : 0x0029 (41 bytes)
+bNumInterfaces           : 0x01 (1 Interface)
+bConfigurationValue      : 0x01 (Configuration 1)
+iConfiguration           : 0x00 (No String Descriptor)
+bmAttributes             : 0x80
+ D7: Reserved, set 1     : 0x01
+ D6: Self Powered        : 0x00 (no)
+ D5: Remote Wakeup       : 0x00 (no)
+ D4..0: Reserved, set 0  : 0x00
+MaxPower                 : 0xFA (500 mA)
+
+Data (HexDump)           : 09 02 29 00 01 01 00 80 FA 09 04 00 00 02 03 00   ..).............
+                           00 00 09 21 11 01 00 01 22 89 00 07 05 02 03 40   ...!...."......@
+                           00 08 07 05 81 03 40 00 08                        ......@..
+
+        ---------------- Interface Descriptor -----------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x04 (Interface Descriptor)
+bInterfaceNumber         : 0x00 (Interface 0)
+bAlternateSetting        : 0x00
+bNumEndpoints            : 0x02 (2 Endpoints)
+bInterfaceClass          : 0x03 (HID - Human Interface Device)
+bInterfaceSubClass       : 0x00 (None)
+bInterfaceProtocol       : 0x00 (None)
+iInterface               : 0x00 (No String Descriptor)
+Data (HexDump)           : 09 04 00 00 02 03 00 00 00                        .........
+
+        ------------------- HID Descriptor --------------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x21 (HID Descriptor)
+bcdHID                   : 0x0111 (HID Version 1.11)
+bCountryCode             : 0x00 (00 = not localized)
+bNumDescriptors          : 0x01
+Data (HexDump)           : 09 21 11 01 00 01 22 89 00                        .!...."..
+Descriptor 1:
+bDescriptorType          : 0x22 (Class=Report)
+wDescriptorLength        : 0x0089 (137 bytes)
+Error reading descriptor : ERROR_GEN_FAILURE (due to a obscure limitation of the Win32 USB API, see F1 Help)
+
+        ----------------- Endpoint Descriptor -----------------
+bLength                  : 0x07 (7 bytes)
+bDescriptorType          : 0x05 (Endpoint Descriptor)
+bEndpointAddress         : 0x02 (Direction=OUT EndpointID=2)
+bmAttributes             : 0x03 (TransferType=Interrupt)
+wMaxPacketSize           : 0x0040 (64 bytes)
+bInterval                : 0x08 (8 ms)
+Data (HexDump)           : 07 05 02 03 40 00 08                              ....@..
+
+        ----------------- Endpoint Descriptor -----------------
+bLength                  : 0x07 (7 bytes)
+bDescriptorType          : 0x05 (Endpoint Descriptor)
+bEndpointAddress         : 0x81 (Direction=IN EndpointID=1)
+bmAttributes             : 0x03 (TransferType=Interrupt)
+wMaxPacketSize           : 0x0040 (64 bytes)
+bInterval                : 0x08 (8 ms)
+Data (HexDump)           : 07 05 81 03 40 00 08                              ....@..
+
+      -------------------- String Descriptors -------------------
+             ------ String Descriptor 0 ------
+bLength                  : 0x04 (4 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language ID[0]           : 0x0409 (English - United States)
+Data (HexDump)           : 04 03 09 04                                       ....
+             ------ String Descriptor 1 ------
+bLength                  : 0x10 (16 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "shanwan"
+Data (HexDump)           : 10 03 73 00 68 00 61 00 6E 00 77 00 61 00 6E 00   ..s.h.a.n.w.a.n.
+             ------ String Descriptor 2 ------
+bLength                  : 0x18 (24 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "X-D GamePad"
+Data (HexDump)           : 18 03 58 00 2D 00 44 00 20 00 47 00 61 00 6D 00   ..X.-.D. .G.a.m.
+                           65 00 50 00 61 00 64 00                           e.P.a.d.
+```
