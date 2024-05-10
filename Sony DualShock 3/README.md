@@ -8,6 +8,12 @@ The `.pcap` files can be inspected with Wireshark. Use the following filter to h
 (((!(usbll.pid == 0xd2)) && !(usbll.pid == 0xa5)) && !(usbll.pid == 0x5a)) && !(usbll.pid == 0x69)
 ```
 
+### Find host address requests
+
+```text
+usb.setup.wValue == 0x03F5
+```
+
 ## Models/Revisions
 
 ### CECHZC2E-A1
