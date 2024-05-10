@@ -3,8 +3,10 @@
         "Bootloader",
         "CECHZC",
         "Eswap",
+        "pcap",
         "SIXAXIS",
         "Thrustmaster",
+        "usbll",
         "Wireshark"
     ]
 }
