@@ -14,6 +14,12 @@ The `.pcap` files can be inspected with Wireshark. Use the following filter to h
 usb.setup.wValue == 0x03F5
 ```
 
+### Find outgoing requests
+
+```text
+(usbll.reassembled.length >= 49) && (usbll.src == "host")
+```
+
 ### Rumble capture test method
 
 Regarding file `2024-05-13_DS3-CECHZC2E-A1_PS3_Rumble_Tests.pcap`:
