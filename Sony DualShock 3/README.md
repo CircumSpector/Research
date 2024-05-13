@@ -16,7 +16,7 @@ usb.setup.wValue == 0x03F5
 
 ### Rumble capture test method
 
-Regarding file ``
+Regarding file `2024-05-13_DS3-CECHZC2E-A1_PS3_Rumble_Tests.pcap`:
 
 - 3 times small motor rumble
 - 3 times big motor rumble
