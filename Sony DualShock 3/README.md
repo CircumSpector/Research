@@ -14,6 +14,14 @@ The `.pcap` files can be inspected with Wireshark. Use the following filter to h
 usb.setup.wValue == 0x03F5
 ```
 
+### Rumble capture test method
+
+Regarding file ``
+
+- 3 times small motor rumble
+- 3 times big motor rumble
+- 3 times both motors rumble
+
 ## Models/Revisions
 
 ### CECHZC2E-A1
