@@ -3,6 +3,10 @@
 - Delivered in bland white box
 - Wired only (USB)
 - Represented as an Xbox 360 Controller on Windows
+- LED bhehavior
+  - Player number when on PS3
+  - P2 and P3 are lit on Windows
+  - P3 and P4 are lit on Linux/Android
 
 ## Pictures
 
