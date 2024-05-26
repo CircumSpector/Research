@@ -1,5 +1,9 @@
 # BLUELAKE Performance PS3
 
+- Works with DsHidMini
+  - Wired
+  - Wireless except LEDs
+
 TBD
 
 ## Windows
