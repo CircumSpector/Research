@@ -719,3 +719,198 @@ Data (HexDump)           : 28 03 57 00 69 00 72 00 65 00 6C 00 65 00 73 00   (.W
                            6C 00 6C 00 65 00 72 00                           l.l.e.r.
 
 ```
+
+## Nintendo Pro Controller Mode
+
+### USBTreeViewer
+
+```text
+
+    =========================== USB Port6 ===========================
+
+Connection Status        : 0x01 (Device is connected)
+Port Chain               : 7-6
+Properties               : 0x01
+ IsUserConnectable       : yes
+ PortIsDebugCapable      : no
+ PortHasMultiCompanions  : no
+ PortConnectorIsTypeC    : no
+
+      ======================== USB Device ========================
+
+        +++++++++++++++++ Device Information ++++++++++++++++++
+Device Description       : USB Input Device
+Device Path              : \\?\usb#vid_057e&pid_2009#shanwan202107142050#{a5dcbf10-6530-11d2-901f-00c04fb951ed}
+Device ID                : USB\VID_057E&PID_2009\SHANWAN202107142050
+Hardware IDs             : USB\VID_057E&PID_2009&REV_0200 USB\VID_057E&PID_2009
+Driver KeyName           : {745a17a0-74d3-11d0-b6fe-00a0c90f57da}\0078 (GUID_DEVCLASS_HIDCLASS)
+Driver                   : \SystemRoot\System32\drivers\hidusb.sys (Version: 10.0.19041.3636  Date: 2023-10-26)
+Driver Inf               : C:\WINDOWS\inf\input.inf
+Legacy BusType           : PNPBus
+Class                    : HIDClass
+Class GUID               : {745a17a0-74d3-11d0-b6fe-00a0c90f57da} (GUID_DEVCLASS_HIDCLASS)
+Interface GUID           : {a5dcbf10-6530-11d2-901f-00c04fb951ed} (GUID_DEVINTERFACE_USB_DEVICE)
+Service                  : HidUsb
+Enumerator               : USB
+Location Info            : Port_#0006.Hub_#0003
+Location IDs             : PCIROOT(0)#PCI(0102)#PCI(0000)#PCI(0800)#PCI(0003)#USBROOT(0)#USB(6), ACPI(_SB_)#ACPI(PCI0)#ACPI(GPP1)#ACPI(BYUP)#ACPI(BYD8)#ACPI(XHC0)#ACPI(RHUB)#ACPI(PRT6)
+Container ID             : {433227b3-c7fe-5438-aab1-3ffc09eb71de}
+Manufacturer Info        : (Standard system devices)
+Capabilities             : 0x94 (Removable, UniqueID, SurpriseRemovalOK)
+Status                   : 0x0180600A (DN_DRIVER_LOADED, DN_STARTED, DN_DISABLEABLE, DN_REMOVABLE, DN_NT_ENUMERATOR, DN_NT_DRIVER)
+Problem Code             : 0
+EnhancedPowerMgmtEnabled : 1
+Power State              : D0 (supported: D0, D1, D2, D3, wake from D0, wake from D1, wake from D2)
+ Child Device 1          : HID-compliant game controller
+  DevicePath             : \\?\hid#vid_057e&pid_2009#9&1e3b55aa&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+  KernelName             : \Device\00000129
+  Device ID              : HID\VID_057E&PID_2009\9&1E3B55AA&0&0000
+  Class                  : HIDClass
+
+        +++++++++++++++++ Registry USB Flags +++++++++++++++++
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags
+ GlobalDisableSerNumGen  : REG_BINARY 00
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\057E20090200
+ osvc                    : REG_BINARY 00 00
+
+        ---------------- Connection Information ---------------
+Connection Index         : 0x06 (6)
+Connection Status        : 0x01 (DeviceConnected)
+Current Config Value     : 0x01
+Device Address           : 0x03 (3)
+Is Hub                   : 0x00 (no)
+Device Bus Speed         : 0x01 (Full-Speed)
+Number Of Open Pipes     : 0x02 (2 pipes to data endpoints)
+Pipe[0]                  : EndpointID=1  Direction=IN   ScheduleOffset=0  Type=Interrupt
+Pipe[1]                  : EndpointID=2  Direction=OUT  ScheduleOffset=0  Type=Interrupt
+Data (HexDump)           : 06 00 00 00 12 01 00 02 00 00 00 40 7E 05 09 20   ...........@~.. 
+                           00 02 01 02 03 01 01 01 00 03 00 02 00 00 00 01   ................
+                           00 00 00 07 05 81 03 40 00 08 00 00 00 00 07 05   .......@........
+                           02 03 40 00 08 00 00 00 00                        ..@......
+
+        --------------- Connection Information V2 -------------
+Connection Index         : 0x06 (6)
+Length                   : 0x10 (16 bytes)
+SupportedUsbProtocols    : 0x03
+ Usb110                  : 1 (yes)
+ Usb200                  : 1 (yes)
+ Usb300                  : 0 (no)
+ ReservedMBZ             : 0x00
+Flags                    : 0x00
+ DevIsOpAtSsOrHigher     : 0 (Is not operating at SuperSpeed or higher)
+ DevIsSsCapOrHigher      : 0 (Is not SuperSpeed capable or higher)
+ DevIsOpAtSsPlusOrHigher : 0 (Is not operating at SuperSpeedPlus or higher)
+ DevIsSsPlusCapOrHigher  : 0 (Is not SuperSpeedPlus capable or higher)
+ ReservedMBZ             : 0x00
+Data (HexDump)           : 06 00 00 00 10 00 00 00 03 00 00 00 00 00 00 00   ................
+
+    ---------------------- Device Descriptor ----------------------
+bLength                  : 0x12 (18 bytes)
+bDescriptorType          : 0x01 (Device Descriptor)
+bcdUSB                   : 0x200 (USB Version 2.00)
+bDeviceClass             : 0x00 (defined by the interface descriptors)
+bDeviceSubClass          : 0x00
+bDeviceProtocol          : 0x00
+bMaxPacketSize0          : 0x40 (64 bytes)
+idVendor                 : 0x057E
+idProduct                : 0x2009
+bcdDevice                : 0x0200
+iManufacturer            : 0x01 (String Descriptor 1)
+ Language 0x0409         : "Nintendo Co., Ltd."
+iProduct                 : 0x02 (String Descriptor 2)
+ Language 0x0409         : "Pro Controller"
+iSerialNumber            : 0x03 (String Descriptor 3)
+ Language 0x0409         : "Shanwan202107142050"
+bNumConfigurations       : 0x01 (1 Configuration)
+Data (HexDump)           : 12 01 00 02 00 00 00 40 7E 05 09 20 00 02 01 02   .......@~.. ....
+                           03 01                                             ..
+
+    ------------------ Configuration Descriptor -------------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x02 (Configuration Descriptor)
+wTotalLength             : 0x0029 (41 bytes)
+bNumInterfaces           : 0x01 (1 Interface)
+bConfigurationValue      : 0x01 (Configuration 1)
+iConfiguration           : 0x00 (No String Descriptor)
+bmAttributes             : 0xA0
+ D7: Reserved, set 1     : 0x01
+ D6: Self Powered        : 0x00 (no)
+ D5: Remote Wakeup       : 0x01 (yes)
+ D4..0: Reserved, set 0  : 0x00
+MaxPower                 : 0xFA (500 mA)
+Data (HexDump)           : 09 02 29 00 01 01 00 A0 FA 09 04 00 00 02 03 00   ..).............
+                           00 00 09 21 11 01 00 01 22 CB 00 07 05 81 03 40   ...!...."......@
+                           00 08 07 05 02 03 40 00 08                        ......@..
+
+        ---------------- Interface Descriptor -----------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x04 (Interface Descriptor)
+bInterfaceNumber         : 0x00
+bAlternateSetting        : 0x00
+bNumEndpoints            : 0x02 (2 Endpoints)
+bInterfaceClass          : 0x03 (HID - Human Interface Device)
+bInterfaceSubClass       : 0x00 (None)
+bInterfaceProtocol       : 0x00 (None)
+iInterface               : 0x00 (No String Descriptor)
+Data (HexDump)           : 09 04 00 00 02 03 00 00 00                        .........
+
+        ------------------- HID Descriptor --------------------
+bLength                  : 0x09 (9 bytes)
+bDescriptorType          : 0x21 (HID Descriptor)
+bcdHID                   : 0x0111 (HID Version 1.11)
+bCountryCode             : 0x00 (00 = not localized)
+bNumDescriptors          : 0x01
+Data (HexDump)           : 09 21 11 01 00 01 22 CB 00                        .!...."..
+Descriptor 1:
+bDescriptorType          : 0x22 (Class=Report)
+wDescriptorLength        : 0x00CB (203 bytes)
+Error reading descriptor : ERROR_INVALID_PARAMETER
+
+        ----------------- Endpoint Descriptor -----------------
+bLength                  : 0x07 (7 bytes)
+bDescriptorType          : 0x05 (Endpoint Descriptor)
+bEndpointAddress         : 0x81 (Direction=IN EndpointID=1)
+bmAttributes             : 0x03 (TransferType=Interrupt)
+wMaxPacketSize           : 0x0040 (64 bytes)
+bInterval                : 0x08 (8 ms)
+Data (HexDump)           : 07 05 81 03 40 00 08                              ....@..
+
+        ----------------- Endpoint Descriptor -----------------
+bLength                  : 0x07 (7 bytes)
+bDescriptorType          : 0x05 (Endpoint Descriptor)
+bEndpointAddress         : 0x02 (Direction=OUT EndpointID=2)
+bmAttributes             : 0x03 (TransferType=Interrupt)
+wMaxPacketSize           : 0x0040 (64 bytes)
+bInterval                : 0x08 (8 ms)
+Data (HexDump)           : 07 05 02 03 40 00 08                              ....@..
+
+    ----------------- Device Qualifier Descriptor -----------------
+Error                    : ERROR_GEN_FAILURE
+
+      -------------------- String Descriptors -------------------
+             ------ String Descriptor 0 ------
+bLength                  : 0x04 (4 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language ID[0]           : 0x0409 (English - United States)
+Data (HexDump)           : 04 03 09 04                                       ....
+             ------ String Descriptor 1 ------
+bLength                  : 0x26 (38 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "Nintendo Co., Ltd."
+Data (HexDump)           : 26 03 4E 00 69 00 6E 00 74 00 65 00 6E 00 64 00   &.N.i.n.t.e.n.d.
+                           6F 00 20 00 43 00 6F 00 2E 00 2C 00 20 00 4C 00   o. .C.o...,. .L.
+                           74 00 64 00 2E 00                                 t.d...
+             ------ String Descriptor 2 ------
+bLength                  : 0x1E (30 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "Pro Controller"
+Data (HexDump)           : 1E 03 50 00 72 00 6F 00 20 00 43 00 6F 00 6E 00   ..P.r.o. .C.o.n.
+                           74 00 72 00 6F 00 6C 00 6C 00 65 00 72 00         t.r.o.l.l.e.r.
+             ------ String Descriptor 3 ------
+bLength                  : 0x28 (40 bytes)
+bDescriptorType          : 0x03 (String Descriptor)
+Language 0x0409          : "Shanwan202107142050"
+Data (HexDump)           : 28 03 53 00 68 00 61 00 6E 00 77 00 61 00 6E 00   (.S.h.a.n.w.a.n.
+                           32 00 30 00 32 00 31 00 30 00 37 00 31 00 34 00   2.0.2.1.0.7.1.4.
+                           32 00 30 00 35 00 30 00                           2.0.5.0.
+```
