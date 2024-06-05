@@ -1,6 +1,6 @@
 # Research
 
-Research &amp; Development Resources.
+Research &amp; Development Resources regarding Gaming Input Peripherals.
 
 ## About
 
